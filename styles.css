@@ -122,3 +122,85 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(247, 222, 83, 0.5);
 }
+
+/* Concerts Section */
+.section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+}
+
+.concerts {
+  padding: 80px 0;
+  background-color: #000;
+  padding-left: 200px;
+}
+
+.concerts-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  max-width: 1200px;
+  border-collapse: collapse;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+th,
+td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+thead th {
+  border-bottom: none;
+}
+
+tbody {
+  background-color: #1b1b1b;
+}
+
+th {
+  background-color: #2a2a2a;
+  font-weight: normal;
+  color: white;
+  font-size: 18px;
+}
+
+thead tr:first-child th {
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  padding: 15px 20px;
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #333;
+}
+
+.order-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.order-button:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
