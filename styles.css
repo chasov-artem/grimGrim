@@ -591,3 +591,216 @@ tr:hover {
 .form-group.focused label {
   color: #ffd700;
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Header */
+  .header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navigation li {
+    margin-left: 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-left: 20px;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    padding-top: 120px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-description,
+  .hero-description1 {
+    font-size: 16px;
+  }
+
+  /* Concerts Section */
+  .concerts {
+    padding-left: 20px;
+    padding: 60px 0;
+  }
+
+  .concerts-table {
+    overflow-x: scroll;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th,
+  td {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+
+  thead tr:first-child th {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  /* Members Section */
+  .members {
+    padding-right: 20px;
+    padding: 60px 0;
+  }
+
+  .members-grid {
+    gap: 40px;
+  }
+
+  .member-photo {
+    width: 250px;
+    height: 220px;
+  }
+
+  /* History Section */
+  .history {
+    padding-left: 20px;
+    padding: 60px 0;
+  }
+
+  .history-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .history-text {
+    flex: 1;
+  }
+
+  .history-image {
+    flex: 1;
+  }
+
+  .history-image img {
+    height: 200px;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding-left: 20px;
+    padding: 60px 0;
+  }
+
+  .contact-title,
+  .contact-subtitle {
+    left: -20px;
+    width: calc(100vw - 40px);
+    margin-left: calc(-50vw + 50% + 20px);
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group.half {
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  .footer {
+    padding-right: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-description,
+  .hero-description1 {
+    font-size: 14px;
+  }
+
+  /* Members Section */
+  .member-photo {
+    width: 200px;
+    height: 180px;
+  }
+
+  .member-info h3 {
+    font-size: 12px;
+  }
+
+  /* History Section */
+  .history-title {
+    font-size: 28px;
+  }
+
+  .history-text p,
+  .history-text-bottom p {
+    font-size: 14px;
+  }
+
+  /* Contact Section */
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+  }
+
+  /* Table */
+  th,
+  td {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  thead tr:first-child th {
+    font-size: 16px;
+  }
+
+  .order-button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
