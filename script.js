@@ -15,3 +15,21 @@ function closeTicketModal() {
 
   document.body.style.overflow = "auto";
 }
+
+// Close modal when clicking outside of it
+window.onclick = function (event) {
+  const modal = document.getElementById("ticketModal");
+
+  if (event.target === modal) {
+    closeTicketModal();
+  }
+};
+
+// Close modal with Escape key
+document.addEventListener("keydown", function (event) {
+  const modal = document.getElementById("ticketModal");
+
+  if (event.key === "Escape" && modal.style.display === "block") {
+    closeTicketModal();
+  }
+});
