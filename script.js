@@ -104,3 +104,27 @@ function sendFormData(name, email, message) {
 
   document.getElementById("contactForm").reset();
 }
+
+// Smooth scrolling for navigation
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('.navigation a[href^="#"]');
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        const headerHeight = document.querySelector(".header").offsetHeight;
+        const targetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});
