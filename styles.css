@@ -67,7 +67,7 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 650px;
-  padding-left: 200px;
+  padding-left: 20px;
 }
 
 .hero-title {
@@ -135,7 +135,8 @@ body {
 .concerts {
   padding: 80px 0;
   background-color: #000;
-  padding-left: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .concerts-table {
@@ -145,7 +146,7 @@ body {
 table {
   width: 100%;
 
-  max-width: 1200px;
+  max-width: 1350px;
   border-collapse: collapse;
   background-color: #333;
   border-radius: 10px;
@@ -205,11 +206,15 @@ tr:hover {
   transform: translateY(-1px);
 }
 
+.button-text-mobile {
+  display: none;
+}
+
 /* Members Section */
 .members {
   padding: 60px 0;
   background-color: #000;
-  padding-right: 150px;
+  padding-right: 20px;
 }
 
 .section-title {
@@ -224,6 +229,9 @@ tr:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 50px;
 }
 
 .member-card {
@@ -277,7 +285,7 @@ tr:hover {
 .history {
   padding: 80px 0;
   background: linear-gradient(135deg, #12212b 0%, #2a2a2a 50%, #140011 100%);
-  padding-left: 200px;
+  padding-left: 20px;
 }
 
 .history-content {
@@ -342,7 +350,7 @@ tr:hover {
 .contact {
   padding: 80px 0;
   background: linear-gradient(315deg, #12212b 0%, #2a2a2a 50%, #140011 100%);
-  padding-left: 200px;
+  padding-left: 20px;
 }
 
 .contact-title {
@@ -352,7 +360,7 @@ tr:hover {
   color: white;
   text-shadow: #666 1px 2px 2px;
   position: relative;
-  left: -200px;
+  left: -20px;
   width: calc(100vw - 40px);
   margin-left: calc(-50vw + 50% + 20px);
 }
@@ -363,7 +371,7 @@ tr:hover {
   margin-bottom: 40px;
   color: white;
   position: relative;
-  left: -200px;
+  left: -20px;
   width: calc(100vw - 40px);
   margin-left: calc(-50vw + 50% + 20px);
 }
@@ -471,7 +479,7 @@ tr:hover {
 .footer {
   background-color: #000;
   padding: 40px 0;
-  padding-right: 180px;
+  padding-right: 20px;
   border-top: 1px solid #333;
 }
 
@@ -483,7 +491,7 @@ tr:hover {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
-  padding-left: 200px;
+  padding-left: 20px;
 }
 
 .copyright p {
@@ -641,18 +649,31 @@ tr:hover {
   }
 
   table {
-    min-width: 600px;
+    min-width: 500px;
   }
 
   th,
   td {
-    padding: 15px 10px;
-    font-size: 14px;
+    padding: 12px 8px;
+    font-size: 13px;
   }
 
   thead tr:first-child th {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .order-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .button-text-desktop {
+    display: none;
+  }
+
+  .button-text-mobile {
+    display: inline;
   }
 
   /* Members Section */
@@ -789,18 +810,53 @@ tr:hover {
   }
 
   /* Table */
+  table {
+    min-width: 380px;
+  }
+
   th,
   td {
-    padding: 10px 5px;
-    font-size: 12px;
+    padding: 6px 3px;
+    font-size: 10px;
   }
 
   thead tr:first-child th {
-    font-size: 16px;
+    font-size: 12px;
+    padding: 5px;
   }
 
   .order-button {
-    padding: 8px 15px;
-    font-size: 12px;
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+}
+
+/* Extra small screens - 480px to 520px */
+@media (max-width: 520px) and (min-width: 481px) {
+  table {
+    min-width: 400px;
+  }
+
+  th,
+  td {
+    padding: 6px 3px;
+    font-size: 10px;
+  }
+
+  thead tr:first-child th {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  .order-button {
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+}
+
+/* Large screens - align members to left */
+@media (min-width: 1200px) {
+  .members-grid {
+    justify-content: flex-start;
   }
 }
