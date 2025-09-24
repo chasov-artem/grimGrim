@@ -76,3 +76,31 @@ function submitForm(event) {
   // If all validation passes, send the form
   sendFormData(name, email, message);
 }
+
+// Send form data via GET
+function sendFormData(name, email, message) {
+  // Create URL
+  const params = new URLSearchParams({
+    name: name,
+    email: email,
+    message: message,
+  });
+
+  // Create the URL for GET
+  const url = `https://httpbin.org/get?${params.toString()}`;
+
+  // Create a link to send GET
+  const link = document.createElement("a");
+  link.href = url;
+  link.target = "_blank";
+  link.style.display = "none";
+
+  // Add link to page, click it, then remove it
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  alert("Дякуємо за ваше повідомлення! Ми зв'яжемося з вами найближчим часом.");
+
+  document.getElementById("contactForm").reset();
+}
