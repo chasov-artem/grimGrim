@@ -105,9 +105,20 @@ function sendFormData(name, email, message) {
   document.getElementById("contactForm").reset();
 }
 
-// Smooth scrolling for navigation
+// Burger menu toggle
+function toggleMenu() {
+  const burger = document.querySelector(".burger-menu");
+  const navigation = document.querySelector(".navigation");
+
+  burger.classList.toggle("active");
+  navigation.classList.toggle("active");
+}
+
+// Close menu when clicking on a link
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.navigation a[href^="#"]');
+  const burger = document.querySelector(".burger-menu");
+  const navigation = document.querySelector(".navigation");
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -124,6 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
           top: targetPosition,
           behavior: "smooth",
         });
+
+        // Close mobile menu
+        burger.classList.remove("active");
+        navigation.classList.remove("active");
       }
     });
   });
