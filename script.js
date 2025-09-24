@@ -33,3 +33,46 @@ document.addEventListener("keydown", function (event) {
     closeTicketModal();
   }
 });
+
+// Form validation and submission
+function submitForm(event) {
+  // Prevent default form submission
+  event.preventDefault();
+
+  // Get form data
+  const form = document.getElementById("contactForm");
+  const formData = new FormData(form);
+
+  // Get values from form
+  const name = formData.get("name").trim();
+  const email = formData.get("email").trim();
+  const message = formData.get("message").trim();
+
+  // Validate name
+  if (!name) {
+    alert("Будь ласка, введіть ваше ім'я");
+    return;
+  }
+
+  // Validate email
+  if (!email) {
+    alert("Будь ласка, введіть ваш email");
+    return;
+  }
+
+  // Check email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Будь ласка, введіть коректний email адрес");
+    return;
+  }
+
+  // Validate message
+  if (!message) {
+    alert("Будь ласка, введіть повідомлення");
+    return;
+  }
+
+  // If all validation passes, send the form
+  sendFormData(name, email, message);
+}
